@@ -1,0 +1,87 @@
+@import "css/vars";
+
+.modal-container.guild-select-modal {
+  bottom: 100px;
+  left: 0;
+  width: 100%;
+  transform: none;
+
+  .close {
+    top: -32px;
+    margin-right: 16px;
+  }
+
+  .modal {
+    display: flex;
+    clip-path: none;
+
+    .modal-content {
+      padding: 0;
+      height: 320px;
+      width: 100%;
+      clip-path: none;
+    }
+
+    .carousel-root {
+      height: 100%;
+
+      .carousel {
+        height: 100%;
+
+        .slider-wrapper {
+          height: 100%;
+
+          .slider {
+            height: 100%;
+          }
+        }
+
+        .slide {
+          height: 100%;
+          width: 80%;
+          min-width: 80%;
+          border-right: solid 1px $text_gray
+        }
+      }
+    }
+
+    .guild-info {
+      padding: 16px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .guild-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 16px;
+      }
+
+      .content-row {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 2;
+
+        .hero-image {
+          background-size: auto 60%;
+          margin-left: 10px;
+          background-position-x: left;
+        }
+
+        .info-column {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 100%;
+
+          .button {
+            justify-self: flex-end;
+            width: calc(100% - 8px);
+          }
+        }
+      }
+    }
+  }
+}

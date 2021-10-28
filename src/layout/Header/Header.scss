@@ -1,0 +1,53 @@
+@import 'css/vars';
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $header_height;
+  padding: 0 40px;
+  font-size: .875em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: $main_dark;
+  z-index: 1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+
+  .logo {
+    color: $white;
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 0.9em;
+  }
+
+  .menu-button {
+    display: none;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 24px;
+
+    svg line {
+      stroke: var(--guild-primary-color);
+    }
+  }
+
+  .logout {}
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    padding: 0 24px;
+
+    .menu-button {
+      display: block;
+    }
+
+    .logout {
+      max-width: 200px;
+    }
+  }
+}

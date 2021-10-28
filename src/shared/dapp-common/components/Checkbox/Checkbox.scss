@@ -1,0 +1,43 @@
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.cbx-inline {
+    width: unset;
+    margin: 0 0 0 15px;
+
+    input[type=checkbox] {
+      margin-right: 3px;
+    }
+  }
+
+  input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    visibility: hidden;
+  }
+
+  .cbx {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    margin: 3px;
+    cursor: pointer;
+    border: solid 1px gray;
+    background-color: white;
+
+    &.checked {
+      cursor: default;
+      border-color: transparent;
+    }
+  }
+}

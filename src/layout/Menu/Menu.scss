@@ -1,0 +1,76 @@
+@import "css/vars";
+
+.menu {
+  width: $menu_width;
+  position: fixed;
+  top: $header_height;
+  bottom: 0;
+  z-index: 1;
+
+  .menu-backdrop {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $text_gray;
+    opacity: .5;
+  }
+
+  .menu-items {
+    height: 100%;
+    background-color: $main_dark;
+    padding: 35px 20px 40px 40px;
+  }
+
+  .menu-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &.active {
+      color: $white;
+
+      .dot {
+        background-color: $main_red;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .menu {
+    display: block;
+    right: 0;
+    transform: translateX(100%);
+    z-index: 100;
+    width: 100%;
+    backdrop-filter: blur(2px);
+
+    .menu-backdrop {
+      display: block;
+    }
+
+    .menu-items {
+      Width: $menu_width;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 100;
+      transform: translateX(100%);
+      transition: all 200ms ease-in;
+    }
+
+    &.visible {
+      transform: translateX(0%);
+
+      .menu-items {
+        transform: translateX(0%);
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "css/vars";
+
+.page.landing {
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  //background: url('/images/Landing_bg.jpg') no-repeat center center;
+  //background-size: 100% 100%;
+
+  .right {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-text {
+    width: 380px;
+  }
+
+  .list {
+    margin: 40px 0;
+  }
+
+  .list-item {
+    margin-bottom: 10px;
+  }
+
+  .button-full {
+    width: 160px;
+  }
+
+  .guild-info {
+    margin-top: 30px;
+  }
+
+  .stats {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 60px;
+
+    .stats-entry {
+
+      img {
+        height: 22px;
+      }
+
+      .number {
+        color: white;
+        margin: 15px 0 8px;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page.landing {
+    padding-top: 0;
+    background: url('/images/Landing_bg_mobile.jpg') no-repeat center -64px;
+    background-size: 100% auto;
+
+    .left, .right {
+      width: 100%;
+    }
+
+    .main-text {
+      width: unset;
+      max-width: 380px;
+    }
+
+    .list {
+      margin: 24px 0;
+    }
+
+    .button.button-mine {
+      width: 100%;
+    }
+
+    .stats {
+      display: block;
+      margin: 40px 0;
+
+      .stats-entry {
+        display: flex;
+        align-items: flex-end;
+        margin-right: 0 !important;
+        height: 32px;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+
+        .number {
+          margin: 0 6px 0 16px;
+        }
+
+        .stat-label {
+          line-height: 1em;
+          padding-bottom: 2px;
+        }
+      }
+    }
+
+    .guild-info {
+      display: none;
+    }
+  }
+}

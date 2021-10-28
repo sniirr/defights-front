@@ -1,0 +1,66 @@
+@import "css/vars";
+@import "css/mixins";
+
+.page.faq-page {
+  .page-inner {
+    .panel.faq-panel .panel-content {
+      padding: 36px;
+
+      a {
+        text-decoration: underline;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      .ReactCollapse--content {
+        padding: 0 18px 0 32px;
+      }
+    }
+
+    .page-title {
+      margin-bottom: 48px;
+    }
+
+    .faq-item:not(:last-child) {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: solid 1px $text_gray;
+    }
+
+    .faq-title {
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      margin: 0;
+
+      svg {
+        width: 14px;
+        height: 14px;
+        margin-right: 18px;
+
+        path {
+          fill: $main_red;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page.faq-page {
+    .page-inner {
+      padding: 0;
+      margin: 0;
+
+      .panel.faq-panel .panel-content {
+        padding: 24px 36px 24px 18px;
+      }
+      .page-title {
+        font-size: 24px;
+        margin-bottom: 36px;
+      }
+    }
+  }
+}

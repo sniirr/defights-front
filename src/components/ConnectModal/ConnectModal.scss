@@ -1,0 +1,32 @@
+@import "css/vars";
+
+.modal.connect-modal {
+  width: 420px;
+
+  .wallet-buttons {
+    margin: 24px 0;
+
+    .button-custom {
+      background-color: $main_mid;
+      height: 56px;
+      padding: 16px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 24px;
+      cursor: pointer;
+    }
+  }
+
+  .center-aligned-row {
+    img {
+      width: 22px;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .modal.connect-modal {
+    width: unset;
+  }
+}

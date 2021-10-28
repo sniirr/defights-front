@@ -1,0 +1,29 @@
+@import "css/vars";
+
+.modal-container.rewards-modal {
+  width: 640px;
+  color: white;
+
+  .modal {
+    .pool-row {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      .pool-name {
+        width: 100px;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .pending-rewards {
+        flex-grow: 2;
+        text-align: center;
+      }
+    }
+
+    .buttons {
+      margin-top: 0;
+    }
+  }
+}

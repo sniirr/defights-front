@@ -1,0 +1,41 @@
+@import "css/vars";
+@import "css/mixins";
+
+.page.story-page {
+  background-color: $main_mid;
+
+  .page-inner {
+    width: 100%;
+    height: calc(100% - 64px);
+    padding: 0;
+    margin: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .story-image {
+    min-width: 1200px;
+    flex-grow: 2;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page.story-page {
+    .page-inner {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .story-image {
+      min-width: unset;
+      width: 100%;
+    }
+  }
+}

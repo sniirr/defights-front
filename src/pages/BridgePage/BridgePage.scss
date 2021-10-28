@@ -1,0 +1,167 @@
+@import "css/vars";
+@import "css/mixins";
+
+.page.bridge-page {
+  padding-top: 16px;
+
+  .page-inner {
+    width: 1100px;
+  }
+
+  .info {
+    flex-grow: 2;
+    padding-right: 100px;
+
+    h1 {
+      margin: 0 0 24px;
+      text-align: left;
+      color: $white;
+      font-weight: 700;
+      font-size: 32px;
+    }
+
+    p {
+      margin-top: 24px;
+      line-height: 1.6em;
+      font-weight: normal;
+    }
+
+    .center-aligned-row {
+      margin-top: 16px;
+    }
+  }
+
+  .dapp-bridge {
+    @extend .panel;
+
+    width: 540px;
+    min-width: 540px;
+    background-color: $main_dark;
+    border: none;
+    border-radius: 0;
+    padding: 40px 40px 32px 32px;
+
+    .toolbar {
+      right: 60px;
+
+      svg {
+        cursor: pointer;
+        margin-left: 20px;
+        color: $white;
+
+        &.disabled {
+          color: #5b5b5b;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .button {
+      @extend .button-full;
+    }
+
+    input[type=text] {
+      background-color: transparent;
+      border: solid 1px $text_gray;
+    }
+
+    .info-message {
+      padding-right: 40px;
+
+      .fee-text {
+        color: white;
+        margin-left: 5px;
+
+        .small-text {
+          padding-bottom: 2px;
+        }
+      }
+    }
+
+    .row:not(:first-child) {
+      margin-top: 30px;
+
+      &.checkbox-row {
+        margin-top: 15px;
+      }
+    }
+
+    .row {
+      &.text-row {
+        color: white;
+      }
+
+      &.checkbox-row {
+        margin-top: 20px !important;
+      }
+    }
+
+    .chains-row {
+      border: none;
+      padding-bottom: 0;
+    }
+
+    .chain-box, .token-select {
+      .item-text {
+        color: $white;
+      }
+    }
+
+    .max-amount {
+      color: $white;
+    }
+
+    .tx-status-container {
+      position: relative;
+
+      .close-icon {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+        cursor: pointer;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .tx-status {
+      @extend .panel;
+      border-color: $text_gray;
+      border-radius: 0;
+      color: $white;
+      padding: 0;
+      margin: 36px 0 0 !important;
+
+      .tx-status-content {
+        @extend .panel-content;
+        padding: 15px;
+      }
+
+      .status-row:not(:first-child) {
+        margin-top: 8px;
+      }
+
+      .tx-id {
+        margin-top: 4px;
+      }
+    }
+
+    .input-error {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page.bridge-page {
+    padding-top: 0;
+
+    .info {
+      padding-right: 0;
+      margin-bottom: 32px;
+    }
+  }
+}

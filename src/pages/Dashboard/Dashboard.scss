@@ -1,0 +1,198 @@
+@import "css/vars";
+
+.page.dashboard {
+  background-color: var(--guild-bg-color);
+
+  .page-inner {
+    width: 1036px;
+    position: relative;
+  }
+
+  .panels-container {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel {
+    background-color: $main_dark;
+
+    .panel-header {
+      margin-bottom: 24px;
+    }
+
+    .stats-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+
+      .column {
+        width: calc((100% - 48px) / 3);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+      }
+    }
+
+    .stats-area {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .button, .pool-item {
+      margin-top: 24px;
+      width: calc((100% - 48px) / 2);
+
+      &:nth-child(odd) {
+        margin-right: 36px;
+      }
+    }
+
+    .btn-claim-rewards {
+      position: absolute;
+      top: 0;
+      right: 40px;
+      width: calc((100% - 108px) / 3);
+    }
+
+    .stats-entry {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: calc(100% / 3);
+
+      .number {
+        font-size: 40px;
+        color: $white;
+        font-weight: 700;
+        line-height: 1em;
+        position: relative;
+
+        svg {
+          position: absolute;
+          margin: 4px 8px;
+        }
+      }
+
+      &.small {
+        margin-top: 24px;
+        height: 54px;
+
+        .number {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .nft-icons {
+
+      .icon {
+        margin-right: 20px;
+        vertical-align: middle;
+        line-height: 1em;
+
+        path {
+          fill: #3C4049;
+        }
+
+        &.active {
+          path {
+            fill: var(--guild-primary-color);
+          }
+        }
+      }
+    }
+
+    &.stats-panel {
+      .panel-content {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
+      }
+
+      .stats-row {
+        margin-top: 24px;
+
+        .stats-entry {
+          width: 100%;
+        }
+
+        .stats-list {
+          flex-grow: 2;
+          padding-left: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          margin-bottom: -4px;
+        }
+      }
+
+      .graph {
+        width: 582px;
+        height: 309px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page.dashboard {
+    .page-inner {
+      width: 100%;
+      padding: 0;
+    }
+
+    .panel {
+      .stats-entry {
+        width: 50%;
+
+        &:nth-child(1) {
+          margin-top: 8px;
+          width: 100%;
+        }
+
+        &:nth-child(2) {
+          margin-top: 24px;
+          width: 100%;
+        }
+
+        .number {
+          font-size: 32px;
+        }
+      }
+
+      .button {
+        width: 46%;
+
+        &.btn-add-liquidity {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+
+      &.stats-panel {
+        .stats-row {
+          flex-direction: column;
+          margin-top: 8px;
+
+          .stats-list {
+            padding: 16px 0 0 0;
+          }
+        }
+
+        .graph {
+          width: 100%;
+          height: 152px;
+
+          svg path {
+            fill: var(--guild-primary-color) !important;
+            stroke: var(--guild-primary-color) !important;
+          }
+        }
+      }
+    }
+  }
+}

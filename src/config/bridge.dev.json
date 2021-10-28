@@ -1,0 +1,47 @@
+{
+  "bridgeRegistry": {
+    "chainKey": "EOS",
+    "contract": "etheosmultok",
+    "tables": {
+      "registry": "accountdet",
+      "regFee": "configset2"
+    }
+  },
+
+  "bridges": [
+    {
+      "id": "etheosmultok",
+      "contracts": {
+        "EOS": {
+          "address": "etheosmultok",
+          "tables": {
+            "feeSettings": "feesettings4",
+            "acceptedSym": "acceptedsym1",
+            "withdrawQueue": "withdrawq3",
+            "genLog": "genlogdet"
+          }
+        },
+        "ETH": {
+          "address": "0xb151141C40146362356d65B3C7a587551f81c5B6"
+        }
+      }
+    },
+    {
+      "id": "dappbridge11",
+      "contracts": {
+        "EOS": {
+          "address": "dappbridge11",
+          "tables": {
+            "feeSettings": "feesettings4",
+            "acceptedSym": "acceptedsym",
+            "withdrawQueue": "withdrawq3",
+            "genLog": "genlogdet"
+          }
+        },
+        "ETH": {
+          "address": "0x7c456881d2b9515BadD6c44Fe1CcEf089B566739"
+        }
+      }
+    }
+  ]
+}

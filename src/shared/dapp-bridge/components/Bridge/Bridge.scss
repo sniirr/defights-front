@@ -1,0 +1,272 @@
+.dapp-bridge {
+  $red: #e64c22;
+  $green: #61ad4f;
+  $panel-width: 680px;
+
+  position: relative;
+  padding: 40px;
+  border-radius: 12px;
+  width: $panel-width;
+  min-width: $panel-width;
+  margin: 0 auto;
+  border: solid 2px white;
+  background-color: black;
+
+  .input {
+    position: relative;
+
+    input[disabled] {
+      background-color: white;
+      opacity: .7;
+    }
+
+    &.with-error {
+      input[type=text] {
+        border-left: solid 8px var(--error-color);
+      }
+    }
+
+    .error {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: var(--error-color);
+    }
+  }
+
+  .row {
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+
+    &.checkbox-row {
+      margin-top: 20px;
+    }
+
+    &.text-row {
+      margin-bottom: 46px;
+    }
+  }
+
+  .small-text {
+    font-size: .85em;
+  }
+
+  .red-text {
+    color: $red;
+  }
+
+  .slider {
+    flex-grow: 2;
+    margin: -10px 15px 0 0;
+
+    .rc-slider-track {
+      background-color: #0053a3;
+    }
+
+    .rc-slider-handle, .rc-slider-dot-active {
+      border-color: #0053a3;
+    }
+
+    .rc-slider-disabled {
+      background-color: transparent;
+      opacity: .7;
+      cursor: not-allowed !important;
+    }
+  }
+
+  .dropdown {
+    svg {
+      width: .5em;
+      margin-left: 5px;
+    }
+
+    .dropdown-menu {
+      font-size: .8em;
+    }
+  }
+
+  input[type=text] {
+    height: 2em;
+    font-size: 1.2em;
+    padding: 0 10px;
+    width: 100%;
+    border: none;
+    margin-top: 2px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+  }
+
+  form {
+    margin-top: 40px;
+  }
+
+  .item {
+    &.item-group {
+      margin-right: 80px;
+    }
+
+    .item-title {
+      font-size: 0.8em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .item-text {
+      font-size: 1.4em;
+      position: relative;
+
+      .small-text {
+        font-size: .6em;
+      }
+    }
+
+    .item-input {
+      margin-top: 2px;
+    }
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+
+    svg {
+      cursor: pointer;
+      margin-left: 20px;
+
+      &.disabled {
+        color: #5b5b5b;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .chains-row {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px white;
+    padding-bottom: 15px;
+
+    .chain-box {
+      width: 44%;
+
+      .MuiButton-root {
+        padding-left: 0;
+      }
+
+      .chain-connect {
+        height: 36px;
+
+        .address {
+          font-size: 0.875em;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        svg {
+          width: 0.875em;
+          height: 0.875em;
+          margin-right: 6px;
+
+          path {
+            fill: $green;
+          }
+        }
+      }
+    }
+
+    .arrow {
+      cursor: pointer;
+      flex-grow: 2;
+
+      svg {
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
+  }
+
+  .info-message {
+    .small-text {
+      margin-left: 5px;
+    }
+
+    .note-text {
+      font-size: .8em;
+      position: relative;
+      margin: 8px 0 0 10px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        width: 2px;
+        height: 2px;
+        background-color: white;
+      }
+    }
+  }
+
+  .tx-status {
+    margin-top: 40px;
+    position: relative;
+    border: solid 1px white;
+    border-radius: 4px;
+    padding: 15px;
+
+    .close-icon {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .status-row {
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+
+      .marker {
+        margin-right: 15px;
+
+        svg path {
+          fill: #b5b5b5;
+        }
+
+        &.done {
+          svg path {
+            fill: $green;
+          }
+        }
+      }
+    }
+
+    .tx-id {
+      margin: 8px 0 0 42px;
+      font-size: .8em;
+
+      a {
+        color: $green;
+        margin-left: 5px;
+      }
+    }
+
+    .small-text {
+      align-self: flex-end;
+      margin-left: 10px;
+      opacity: .7;
+      font-size: .725em;
+    }
+  }
+}

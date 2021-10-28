@@ -1,0 +1,275 @@
+@import "css/vars";
+
+.polygon {
+  --wheel-size: 330px;
+  //$wheel_size: 330px;
+  width: var(--wheel-size);
+  min-width: var(--wheel-size);
+  height: var(--wheel-size);
+
+  --triangle-width: calc(var(--wheel-size) / 2);
+  --triangle-height: 113.5px;
+  //$triangle_width: calc(var(--wheel-size) / 2);
+  //$triangle_height: 113.5px;
+
+  background: url("/images/polygon.svg") no-repeat top center;
+  background-size: 100% 100%;
+  margin-bottom: 25px;
+  position: relative;
+
+  .middle-point {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 55%;
+    left: 50%;
+  }
+
+  .guild-name {
+    position: absolute;
+    transform:  rotate(var(--rotation)) translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .triangle {
+    position: absolute;
+    text-align: center;
+
+    //height: 112.85px;
+    //width: 164px;
+
+    width: var(--triangle-width);
+    height: var(--triangle-height);
+
+    transform: rotate(var(--rotation)) translate(-50%, -100%);
+    transform-origin: 0 0;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    background-color: #969799;
+
+    &:before {
+      content: '';
+      clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+      background: black;
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      right: 1px;
+    }
+  }
+
+  .image {
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    right: 1px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      background: var(--hero-image) no-repeat top center;
+      //background: url('/images/superhero-sm.svg') no-repeat top center;
+      background-size: 50%;
+      filter: grayscale(75%);
+      height: 100%;
+      width: 100%;
+      transform: rotate(calc(0deg - var(--rotation)));
+    }
+
+    &.selected:before {
+      filter: unset;
+    }
+  }
+
+  .image:not(.selected):hover {
+    cursor: pointer;
+
+    &:before {
+      filter: unset;
+    }
+
+    &:after {
+      content: 'Choose';
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      color: white;
+      padding: 2px 8px;
+      border: solid 1px white;
+      transform: rotate(calc(0deg - var(--rotation))) translate(-50%, -50%);
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
+
+  .yellow {
+    --rotation: 0deg;
+    color: $team_yellow;
+
+    &.guild-name {
+      bottom: 111px;
+    }
+
+    .image {
+      background-color: #afa99b;
+
+      &:before {
+        top: 7%;
+        left: 3%;
+      }
+
+      &:hover, &.selected {
+        background-color: $team_yellow;
+      }
+    }
+  }
+
+  .green {
+    --rotation: 72deg;
+    color: $team_green;
+
+    &.guild-name {
+      top: -18px;
+      left: 97px;
+    }
+
+    .image {
+      background-color: #657366;
+
+      &:before {
+        top: -13%;
+        left: 8%;
+      }
+
+      &:not(.selected):after {
+        top: 3%;
+        left: 47%;
+      }
+
+      &:hover, &.selected {
+        background-color: $team_green;
+      }
+    }
+  }
+
+  .black {
+    --rotation: 144deg;
+    color: $team_black;
+
+    &.guild-name {
+      --rotation: -36deg;
+      top: 77px;
+      left: 69px;
+    }
+
+    .image {
+      background-color: #464542;
+
+      &:before {
+        top: -34%;
+        left: 5%;
+      }
+
+      &:not(.selected):after {
+        top: -5%;
+        left: 14%;
+      }
+
+      &:hover, &.selected {
+        background-color: $team_black;
+      }
+    }
+  }
+
+  .blue {
+    --rotation: -144deg;
+    color: $team_purple;
+
+    &.guild-name {
+      --rotation: 36deg;
+      top: 116px;
+      left: -82px;
+    }
+
+    .image {
+      background-color: #636E96;
+
+      &:before {
+        top: -32%;
+        left: -8%;
+      }
+
+      &:not(.selected):after {
+        top: 32%;
+        left: 7%;
+      }
+
+      &:hover, &.selected {
+        background-color: $team_purple;
+      }
+    }
+  }
+
+  .orange {
+    --rotation: -72deg;
+    color: $team_orange;
+
+    &.guild-name {
+      top: -70px;
+      left: -132px;
+    }
+
+    .image {
+      background-color: #897F77;
+
+      &:before {
+        top: -8%;
+        left: -8%;
+      }
+
+      &:not(.selected):after {
+        top: 62%;
+        left: 22%;
+      }
+
+      &:hover, &.selected {
+        background-color: $team_orange;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .polygon {
+    --wheel-size: 310px;
+    --triangle-height: 106px;
+
+    .yellow.guild-name {
+      bottom: 103px;
+    }
+
+    .green.guild-name {
+      top: -18px;
+      left: 89px;
+    }
+
+    .black.guild-name {
+      top: 72px;
+      left: 64px;
+    }
+
+    .blue.guild-name {
+      top: 110px;
+      left: -77px;
+    }
+
+    .orange.guild-name {
+      top: -70px;
+      left: -124px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "css/vars";
+
+.panel.claimable-bnt {
+  .button {
+    width: 160px !important;
+    margin: 0 !important;
+  }
+
+  .contract-claim {
+    margin-bottom: 36px;
+    display: flex;
+
+    .button {
+      flex-grow: 2;
+      min-width: 280px;
+      width: 280px !important;
+      margin-left: 40px !important;
+    }
+    //justify-content: flex-end;
+  }
+
+  .claim-row {
+    margin-bottom: 18px;
+  }
+}

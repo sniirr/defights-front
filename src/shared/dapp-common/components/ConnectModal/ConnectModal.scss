@@ -1,0 +1,133 @@
+@import "shared/dapp-common/utils/mixins";
+
+.connect-modal {
+
+  .chain, .connector {
+    @extend .center-aligned-spaced-row;
+    height: 80px;
+    font-size: 1.2em;
+    padding: 0 20px;
+
+    .wallet-icon {
+      margin-right: 20px;
+
+      height: 36px;
+      background: no-repeat center center;
+
+      &.eth {
+        background-image: url("./images/eth.svg");
+      }
+
+      &.eos {
+        background-image: url("./images/eos.svg");
+      }
+
+      &.metamask {
+        background-image: url("./images/metamask.svg");
+      }
+
+      &.walletconnect {
+        background-image: url("./images/walletconnect.svg");
+      }
+
+      &.scatter {
+        background-image: url("./images/scatter.svg");
+      }
+
+      &.tokenpocket {
+        background-image: url("./images/tokenpocket.svg");
+      }
+
+      &.anchor {
+        background-image: url("./images/anchor.svg");
+      }
+    }
+
+    .name {
+      @extend .center-aligned-row;
+      flex-grow: 2;
+    }
+
+    svg path {
+      fill: #aaa;
+    }
+
+    svg.svg-inline--fa {
+      width: .4em;
+    }
+
+    &:first-child {
+      margin-top: 15px;
+    }
+
+    &:last-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  .chain {
+    height: 100px;
+    padding: 28px 20px;
+
+    .name {
+      height: 100%;
+    }
+
+    .round-bg {
+      margin-right: 20px;
+      background-color: white;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .wallet-icon {
+        margin-right: 0;
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    .info {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .account-name {
+      font-size: 0.8em;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      color: var(--success-color);
+    }
+
+    .logout {
+      cursor: pointer;
+
+      svg {
+        width: 0.5em;
+      }
+    }
+
+    &.not-connected {
+      cursor: pointer;
+
+      .account-name {
+        color: var(--error-color);
+        font-style: italic;
+      }
+    }
+  }
+
+  .connector {
+    cursor: pointer;
+
+    .wallet-icon {
+      width: 32px;
+    }
+  }
+}

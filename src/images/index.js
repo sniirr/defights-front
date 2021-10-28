@@ -1,0 +1,12 @@
+export { default as tvlIcon } from './tvl-icon.svg'
+export { default as accountIcon } from './account-icon.svg'
+export { default as barsIcon } from './bars-icon.svg'
+export { default as xIcon } from './x-icon.svg'
+export { default as questionMarkIcon } from './question-mark-icon.svg'
+export { default as valueUpIcon } from './value-up-icon.svg'
+export { default as menuIcon } from './menu-icon.svg'
+// nft icons
+export { default as outfitIcon } from './outfit-icon.svg'
+export { default as powerIcon } from './power-icon.svg'
+export { default as gadgetIcon } from './gadget-icon.svg'
+export { default as accessoryIcon } from './accessory-icon.svg'

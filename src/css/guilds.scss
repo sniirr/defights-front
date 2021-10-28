@@ -1,0 +1,177 @@
+.App {
+  --guild-primary-color: #FF3859;
+  --guild-secondary-color: white;
+  --guild-bg-color: #000;
+  --guild-dash-header: url('/images/dash-header-green.png');
+  --rarity-color: #1d1d21;
+  --guild-graph: url('/images/graph-green.png');
+  --hero-image: url('/images/heroes/hero-0-0-1-1.svg');
+
+  &.guild-0, .guild-0 {
+    --guild-primary-color: #FAD563;
+    --guild-secondary-color: #1F2427;
+    --guild-bg-color: #434039;
+    --guild-dash-header: url('/images/dash-header-yellow.png');
+    --guild-graph: url('/images/graph-yellow.png');
+  }
+  &.guild-1, .guild-1 {
+    --guild-primary-color: #5BB463;
+    --guild-bg-color: #444C44;
+    --guild-dash-header: url('/images/dash-header-green.png');
+    --guild-graph: url('/images/graph-green.png');
+  }
+  &.guild-2, .guild-2 {
+    --guild-primary-color: #ACA698;
+    --guild-bg-color: #403F3D;
+    --guild-dash-header: url('/images/dash-header-white.png');
+    --guild-graph: url('/images/graph-white.png');
+  }
+  &.guild-3, .guild-3 {
+    --guild-primary-color: #7E97ED;
+    --guild-bg-color: #393B44;
+    --guild-dash-header: url('/images/dash-header-purple.png');
+    --guild-graph: url('/images/graph-purple.png');
+  }
+  &.guild-4, .guild-4 {
+    --guild-primary-color: #F5841F;
+    --guild-bg-color: #3A3631;
+    --guild-dash-header: url('/images/dash-header-orange.png');
+    --guild-graph: url('/images/graph-orange.png');
+  }
+
+  // pinnacle male
+  &.hero-0-0-0-0, .hero-0-0-0-0 { --hero-image: url('/images/heroes/hero-0-0-0-0.svg');}
+  &.hero-0-0-0-1, .hero-0-0-0-1 { --hero-image: url('/images/heroes/hero-0-0-0-1.svg');}
+  &.hero-0-0-0-2, .hero-0-0-0-2 { --hero-image: url('/images/heroes/hero-0-0-0-2.svg');}
+  &.hero-0-0-1-0, .hero-0-0-1-0 { --hero-image: url('/images/heroes/hero-0-0-1-0.svg');}
+  &.hero-0-0-1-1, .hero-0-0-1-1 { --hero-image: url('/images/heroes/hero-0-0-1-1.svg');}
+  &.hero-0-0-1-2, .hero-0-0-1-2 { --hero-image: url('/images/heroes/hero-0-0-1-2.svg');}
+  &.hero-0-0-2-0, .hero-0-0-2-0 { --hero-image: url('/images/heroes/hero-0-0-2-0.svg');}
+  &.hero-0-0-2-1, .hero-0-0-2-1 { --hero-image: url('/images/heroes/hero-0-0-2-1.svg');}
+  &.hero-0-0-2-2, .hero-0-0-2-2 { --hero-image: url('/images/heroes/hero-0-0-2-2.svg');}
+  // pinnacle female
+  &.hero-0-1-0-0, .hero-0-1-0-0 { --hero-image: url('/images/heroes/hero-0-1-0-0.svg');}
+  &.hero-0-1-0-1, .hero-0-1-0-1 { --hero-image: url('/images/heroes/hero-0-1-0-1.svg');}
+  &.hero-0-1-0-2, .hero-0-1-0-2 { --hero-image: url('/images/heroes/hero-0-1-0-2.svg');}
+  &.hero-0-1-1-0, .hero-0-1-1-0 { --hero-image: url('/images/heroes/hero-0-1-1-0.svg');}
+  &.hero-0-1-1-1, .hero-0-1-1-1 { --hero-image: url('/images/heroes/hero-0-1-1-1.svg');}
+  &.hero-0-1-1-2, .hero-0-1-1-2 { --hero-image: url('/images/heroes/hero-0-1-1-2.svg');}
+  &.hero-0-1-2-0, .hero-0-1-2-0 { --hero-image: url('/images/heroes/hero-0-1-2-0.svg');}
+  &.hero-0-1-2-1, .hero-0-1-2-1 { --hero-image: url('/images/heroes/hero-0-1-2-1.svg');}
+  &.hero-0-1-2-2, .hero-0-1-2-2 { --hero-image: url('/images/heroes/hero-0-1-2-2.svg');}
+  // verdant male
+  &.hero-1-0-0-0, .hero-1-0-0-0 { --hero-image: url('/images/heroes/hero-1-0-0-0.svg');}
+  &.hero-1-0-0-1, .hero-1-0-0-1 { --hero-image: url('/images/heroes/hero-1-0-0-1.svg');}
+  &.hero-1-0-0-2, .hero-1-0-0-2 { --hero-image: url('/images/heroes/hero-1-0-0-2.svg');}
+  &.hero-1-0-1-0, .hero-1-0-1-0 { --hero-image: url('/images/heroes/hero-1-0-1-0.svg');}
+  &.hero-1-0-1-1, .hero-1-0-1-1 { --hero-image: url('/images/heroes/hero-1-0-1-1.svg');}
+  &.hero-1-0-1-2, .hero-1-0-1-2 { --hero-image: url('/images/heroes/hero-1-0-1-2.svg');}
+  &.hero-1-0-2-0, .hero-1-0-2-0 { --hero-image: url('/images/heroes/hero-1-0-2-0.svg');}
+  &.hero-1-0-2-1, .hero-1-0-2-1 { --hero-image: url('/images/heroes/hero-1-0-2-1.svg');}
+  &.hero-1-0-2-2, .hero-1-0-2-2 { --hero-image: url('/images/heroes/hero-1-0-2-2.svg');}
+  // verdant female
+  &.hero-1-1-0-0, .hero-1-1-0-0 { --hero-image: url('/images/heroes/hero-1-1-0-0.svg');}
+  &.hero-1-1-0-1, .hero-1-1-0-1 { --hero-image: url('/images/heroes/hero-1-1-0-1.svg');}
+  &.hero-1-1-0-2, .hero-1-1-0-2 { --hero-image: url('/images/heroes/hero-1-1-0-2.svg');}
+  &.hero-1-1-1-0, .hero-1-1-1-0 { --hero-image: url('/images/heroes/hero-1-1-1-0.svg');}
+  &.hero-1-1-1-1, .hero-1-1-1-1 { --hero-image: url('/images/heroes/hero-1-1-1-1.svg');}
+  &.hero-1-1-1-2, .hero-1-1-1-2 { --hero-image: url('/images/heroes/hero-1-1-1-2.svg');}
+  &.hero-1-1-2-0, .hero-1-1-2-0 { --hero-image: url('/images/heroes/hero-1-1-2-0.svg');}
+  &.hero-1-1-2-1, .hero-1-1-2-1 { --hero-image: url('/images/heroes/hero-1-1-2-1.svg');}
+  &.hero-1-1-2-2, .hero-1-1-2-2 { --hero-image: url('/images/heroes/hero-1-1-2-2.svg');}
+  // aegis male
+  &.hero-2-0-0-0, .hero-2-0-0-0 { --hero-image: url('/images/heroes/hero-2-0-0-0.svg');}
+  &.hero-2-0-0-1, .hero-2-0-0-1 { --hero-image: url('/images/heroes/hero-2-0-0-1.svg');}
+  &.hero-2-0-0-2, .hero-2-0-0-2 { --hero-image: url('/images/heroes/hero-2-0-0-2.svg');}
+  &.hero-2-0-1-0, .hero-2-0-1-0 { --hero-image: url('/images/heroes/hero-2-0-1-0.svg');}
+  &.hero-2-0-1-1, .hero-2-0-1-1 { --hero-image: url('/images/heroes/hero-2-0-1-1.svg');}
+  &.hero-2-0-1-2, .hero-2-0-1-2 { --hero-image: url('/images/heroes/hero-2-0-1-2.svg');}
+  &.hero-2-0-2-0, .hero-2-0-2-0 { --hero-image: url('/images/heroes/hero-2-0-2-0.svg');}
+  &.hero-2-0-2-1, .hero-2-0-2-1 { --hero-image: url('/images/heroes/hero-2-0-2-1.svg');}
+  &.hero-2-0-2-2, .hero-2-0-2-2 { --hero-image: url('/images/heroes/hero-2-0-2-2.svg');}
+  // aegis female
+  &.hero-2-1-0-0, .hero-2-1-0-0 { --hero-image: url('/images/heroes/hero-2-1-0-0.svg');}
+  &.hero-2-1-0-1, .hero-2-1-0-1 { --hero-image: url('/images/heroes/hero-2-1-0-1.svg');}
+  &.hero-2-1-0-2, .hero-2-1-0-2 { --hero-image: url('/images/heroes/hero-2-1-0-2.svg');}
+  &.hero-2-1-1-0, .hero-2-1-1-0 { --hero-image: url('/images/heroes/hero-2-1-1-0.svg');}
+  &.hero-2-1-1-1, .hero-2-1-1-1 { --hero-image: url('/images/heroes/hero-2-1-1-1.svg');}
+  &.hero-2-1-1-2, .hero-2-1-1-2 { --hero-image: url('/images/heroes/hero-2-1-1-2.svg');}
+  &.hero-2-1-2-0, .hero-2-1-2-0 { --hero-image: url('/images/heroes/hero-2-1-2-0.svg');}
+  &.hero-2-1-2-1, .hero-2-1-2-1 { --hero-image: url('/images/heroes/hero-2-1-2-1.svg');}
+  &.hero-2-1-2-2, .hero-2-1-2-2 { --hero-image: url('/images/heroes/hero-2-1-2-2.svg');}
+  // the academy male
+  &.hero-3-0-0-0, .hero-3-0-0-0 { --hero-image: url('/images/heroes/hero-3-0-0-0.svg');}
+  &.hero-3-0-0-1, .hero-3-0-0-1 { --hero-image: url('/images/heroes/hero-3-0-0-1.svg');}
+  &.hero-3-0-0-2, .hero-3-0-0-2 { --hero-image: url('/images/heroes/hero-3-0-0-2.svg');}
+  &.hero-3-0-1-0, .hero-3-0-1-0 { --hero-image: url('/images/heroes/hero-3-0-1-0.svg');}
+  &.hero-3-0-1-1, .hero-3-0-1-1 { --hero-image: url('/images/heroes/hero-3-0-1-1.svg');}
+  &.hero-3-0-1-2, .hero-3-0-1-2 { --hero-image: url('/images/heroes/hero-3-0-1-2.svg');}
+  &.hero-3-0-2-0, .hero-3-0-2-0 { --hero-image: url('/images/heroes/hero-3-0-2-0.svg');}
+  &.hero-3-0-2-1, .hero-3-0-2-1 { --hero-image: url('/images/heroes/hero-3-0-2-1.svg');}
+  &.hero-3-0-2-2, .hero-3-0-2-2 { --hero-image: url('/images/heroes/hero-3-0-2-2.svg');}
+  // the academy female
+  &.hero-3-1-0-0, .hero-3-1-0-0 { --hero-image: url('/images/heroes/hero-3-1-0-0.svg');}
+  &.hero-3-1-0-1, .hero-3-1-0-1 { --hero-image: url('/images/heroes/hero-3-1-0-1.svg');}
+  &.hero-3-1-0-2, .hero-3-1-0-2 { --hero-image: url('/images/heroes/hero-3-1-0-2.svg');}
+  &.hero-3-1-1-0, .hero-3-1-1-0 { --hero-image: url('/images/heroes/hero-3-1-1-0.svg');}
+  &.hero-3-1-1-1, .hero-3-1-1-1 { --hero-image: url('/images/heroes/hero-3-1-1-1.svg');}
+  &.hero-3-1-1-2, .hero-3-1-1-2 { --hero-image: url('/images/heroes/hero-3-1-1-2.svg');}
+  &.hero-3-1-2-0, .hero-3-1-2-0 { --hero-image: url('/images/heroes/hero-3-1-2-0.svg');}
+  &.hero-3-1-2-1, .hero-3-1-2-1 { --hero-image: url('/images/heroes/hero-3-1-2-1.svg');}
+  &.hero-3-1-2-2, .hero-3-1-2-2 { --hero-image: url('/images/heroes/hero-3-1-2-2.svg');}
+  // ignite male
+  &.hero-4-0-0-0, .hero-4-0-0-0 { --hero-image: url('/images/heroes/hero-4-0-0-0.svg');}
+  &.hero-4-0-0-1, .hero-4-0-0-1 { --hero-image: url('/images/heroes/hero-4-0-0-1.svg');}
+  &.hero-4-0-0-2, .hero-4-0-0-2 { --hero-image: url('/images/heroes/hero-4-0-0-2.svg');}
+  &.hero-4-0-1-0, .hero-4-0-1-0 { --hero-image: url('/images/heroes/hero-4-0-1-0.svg');}
+  &.hero-4-0-1-1, .hero-4-0-1-1 { --hero-image: url('/images/heroes/hero-4-0-1-1.svg');}
+  &.hero-4-0-1-2, .hero-4-0-1-2 { --hero-image: url('/images/heroes/hero-4-0-1-2.svg');}
+  &.hero-4-0-2-0, .hero-4-0-2-0 { --hero-image: url('/images/heroes/hero-4-0-2-0.svg');}
+  &.hero-4-0-2-1, .hero-4-0-2-1 { --hero-image: url('/images/heroes/hero-4-0-2-1.svg');}
+  &.hero-4-0-2-2, .hero-4-0-2-2 { --hero-image: url('/images/heroes/hero-4-0-2-2.svg');}
+  // ignite female
+  &.hero-4-1-0-0, .hero-4-1-0-0 { --hero-image: url('/images/heroes/hero-4-1-0-0.svg');}
+  &.hero-4-1-0-1, .hero-4-1-0-1 { --hero-image: url('/images/heroes/hero-4-1-0-1.svg');}
+  &.hero-4-1-0-2, .hero-4-1-0-2 { --hero-image: url('/images/heroes/hero-4-1-0-2.svg');}
+  &.hero-4-1-1-0, .hero-4-1-1-0 { --hero-image: url('/images/heroes/hero-4-1-1-0.svg');}
+  &.hero-4-1-1-1, .hero-4-1-1-1 { --hero-image: url('/images/heroes/hero-4-1-1-1.svg');}
+  &.hero-4-1-1-2, .hero-4-1-1-2 { --hero-image: url('/images/heroes/hero-4-1-1-2.svg');}
+  &.hero-4-1-2-0, .hero-4-1-2-0 { --hero-image: url('/images/heroes/hero-4-1-2-0.svg');}
+  &.hero-4-1-2-1, .hero-4-1-2-1 { --hero-image: url('/images/heroes/hero-4-1-2-1.svg');}
+  &.hero-4-1-2-2, .hero-4-1-2-2 { --hero-image: url('/images/heroes/hero-4-1-2-2.svg');}
+
+  .rarity-0 {
+    --rarity-color: green;
+  }
+  .rarity-1 {
+    --rarity-color: blue;
+  }
+  .rarity-2 {
+    --rarity-color: purple;
+  }
+  .rarity-3 {
+    --rarity-color: gold;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .App {
+    --guild-dash-header: url('/images/dash-header-green-mobile.jpg') !important;
+
+    &.guild-0, .guild-0 {
+      --guild-dash-header: url('/images/dash-header-yellow-mobile.jpg') !important;
+    }
+    &.guild-1, .guild-1 {
+      --guild-dash-header: url('/images/dash-header-green-mobile.jpg') !important;
+    }
+    &.guild-2, .guild-2 {
+      --guild-dash-header: url('/images/dash-header-white-mobile.jpg') !important;
+    }
+    &.guild-3, .guild-3 {
+      --guild-dash-header: url('/images/dash-header-purple-mobile.jpg') !important;
+    }
+    &.guild-4, .guild-4 {
+      --guild-dash-header: url('/images/dash-header-orange-mobile.jpg') !important;
+    }
+  }
+}

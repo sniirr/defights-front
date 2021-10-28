@@ -1,0 +1,92 @@
+@import "css/vars";
+
+.modal-container.hero-props-modal {
+  width: 620px;
+
+  .modal {
+    .row {
+      &:first-child {
+        margin-bottom: 32px;
+      }
+
+      .cell:nth-child(2) {
+        width: 312px;
+        text-align: right;
+      }
+    }
+
+    .hero-image {
+      background: var(--hero-image) no-repeat bottom center;
+      min-width: 90px;
+      height: 150px;
+      background-size: auto 100%;
+    }
+
+    .radio.tone {
+      .radio-dot {
+        width: 24px;
+        height: 24px;
+        border: none;
+      }
+
+      .label {
+        display: none;
+      }
+
+      &:nth-child(1) {
+        .radio-dot {
+          background-color: #DDC9A2;
+        }
+      }
+      &:nth-child(2) {
+        .radio-dot {
+          background-color: #8A6F46;
+        }
+      }
+      &:nth-child(3) {
+        .radio-dot {
+          background-color: #442F2F;
+        }
+      }
+
+      &.selected {
+        .radio-dot {
+          border: solid 2px var(--guild-primary-color);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .modal-container.hero-props-modal {
+    width: 90%;
+
+    .modal {
+      .row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .radio-buttons {
+        justify-content: flex-start;
+
+        .radio {
+          .radio-dot {
+            margin: 0 8px 0 0;
+          }
+
+          .label {
+            margin-right: 16px;
+          }
+
+          &.tone {
+            .radio-dot {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

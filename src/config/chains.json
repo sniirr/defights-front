@@ -1,0 +1,25 @@
+{
+  "EOS": {
+    "name": "EOS",
+    "chainInfo": {
+      "chainId": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906",
+      "host": "eos.greymass.com",
+      "port": 443,
+      "protocol": "https"
+    },
+    "dspInfo": {
+      "protocol": "https",
+      "host": "dsp1tlv.dappsolutions.app",
+      "port": 443,
+      "chainId": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906"
+    },
+    "connectors": ["Scatter", "Anchor", "TokenPocket"]
+  },
+  "ETH": {
+    "name": "Ethereum",
+    "chainInfo": {
+      "chainId": "0x1"
+    },
+    "connectors": ["MetaMask", "WalletConnect"]
+  }
+}

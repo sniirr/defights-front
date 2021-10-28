@@ -1,0 +1,147 @@
+@import "css/vars";
+
+.asset-with-slider-form {
+  .label {
+    margin-right: 24px;
+  }
+
+  .slider {
+    flex-grow: 2;
+    margin: 0 5px 0 5px;
+
+    .rc-slider-track {
+      background-color: var(--neutral-color);
+    }
+
+    .rc-slider-handle, .rc-slider-dot-active {
+      border-color: var(--neutral-color);
+    }
+
+    .rc-slider-disabled {
+      background-color: transparent;
+      opacity: .7;
+      cursor: not-allowed !important;
+    }
+  }
+
+  .input-container {
+    margin-bottom: 24px !important;
+
+    .max-amount {
+      color: white;
+    }
+
+    .input {
+      position: relative;
+
+      input[disabled] {
+        opacity: .5;
+      }
+
+      &.with-error {
+        input[type=text] {
+          border-left: solid 8px var(--error-color);
+        }
+      }
+
+      .error {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        font-size: 0.9em;
+        color: var(--error-color);
+      }
+    }
+  }
+
+  .unlock-box {
+    background-color: var(--neutral-color);
+    color: white;
+    padding: 6px 12px;
+
+    span {
+      width: 80px;
+    }
+  }
+}
+
+.modal-container.liquidity-modal {
+  width: 500px;
+
+  .modal {
+    .tabs {
+      .tabs-header {
+        font-size: 1.2em;
+        margin-bottom: 36px;
+      }
+    }
+
+    .label {
+      margin-right: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+
+      .form-inputs {
+        margin-bottom: 36px;
+      }
+    }
+
+    .bottom-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 2;
+
+      .available-space {
+        text-align: right;
+      }
+    }
+
+    .submit-row {
+      margin-top: 12px;
+      justify-content: flex-end !important;
+
+      .button {
+        width: calc((100% - 48px) / 2);
+
+        &:last-child {
+          margin-left: 48px;
+        }
+      }
+    }
+
+    .dropdown-container {
+      margin-bottom: 24px;
+
+      .dropdown {
+        color: white;
+        position: relative;
+
+        .dropdown-menu {
+          width: 120px;
+        }
+      }
+    }
+
+    .row {
+
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .modal-container.liquidity-modal {
+    width: 90%;
+
+    .modal {
+      .row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

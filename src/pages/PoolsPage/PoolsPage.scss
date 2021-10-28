@@ -1,0 +1,205 @@
+@import "css/vars";
+
+.page.pools-page {
+  background-color: var(--guild-bg-color);
+
+  // temp
+  .create-position {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .page-inner {
+    width: 1036px;
+    position: relative;
+  }
+
+  .panels-container {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel {
+    background-color: $main_dark;
+
+    .panel-header {
+      margin-bottom: 24px;
+    }
+
+    .stats-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+
+      .column {
+        width: calc((100% - 48px) / 3);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-end;
+      }
+    }
+
+    .stats-area {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .button, .pool-item {
+      margin-top: 24px;
+      width: calc((100% - 48px) / 2);
+
+      &:nth-child(odd) {
+        margin-right: 36px;
+      }
+    }
+
+    &.pools-panel {
+      .subheader {
+        margin-bottom: 10px;
+      }
+
+      .pools, .buttons {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .buttons {
+        .button {
+          margin-top: 12px;
+
+          &:last-child {
+            margin-right: 0 !important;
+          }
+        }
+      }
+
+      .pool-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 24px;
+        margin-top: 0;
+        background-color: $text_gray;
+        clip-path: polygon(0 0, calc(100% - 15px) 0%, 100% 15px, 100% 100%, 0% 100%, 0% 0%);
+
+        .panel-content {
+          clip-path: polygon(0 0, calc(100% - 15px) 0%, 100% 15px, 100% 100%, 0% 100%, 0% 0%);
+          padding: 18px;
+        }
+
+        .subheader {
+          margin: 18px 0 -18px;
+        }
+
+        .your-stake {
+          .stats-entry.small {
+            .number {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .pool-name {
+          font-size: 24px;
+          color: white;
+          font-weight: 700;
+
+          svg {
+            width: 14px;
+            margin-right: 10px;
+
+            path {
+              fill: var(--guild-primary-color);
+            }
+          }
+        }
+
+        .buttons {
+          margin-top: 10px;
+
+          .button {
+            width: calc((100% - 18px) / 2);
+            margin-right: 12px;
+          }
+        }
+
+        .stats-entry {
+          margin-top: 12px;
+          width: 50%;
+
+          &:nth-child(2) {
+            padding-left: 12px;
+          }
+        }
+      }
+    }
+
+    .stats-entry {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: calc(100% / 3);
+
+      .number {
+        font-size: 40px;
+        color: $white;
+        font-weight: 700;
+        line-height: 1em;
+        position: relative;
+
+        svg {
+          position: absolute;
+          margin: 4px 8px;
+        }
+      }
+
+      &.small {
+        margin-top: 24px;
+        height: 54px;
+
+        .number {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .page.pools-page {
+    .page-inner {
+      width: 100%;
+      padding: 0;
+    }
+
+    .panel {
+      .stats-entry {
+        width: 50%;
+
+        &:nth-child(1) {
+          margin-top: 8px;
+          width: 100%;
+        }
+
+        &:nth-child(2) {
+          margin-top: 24px;
+          width: 100%;
+        }
+
+        .number {
+          font-size: 32px;
+        }
+      }
+
+      .button {
+        width: 46%;
+      }
+    }
+  }
+}

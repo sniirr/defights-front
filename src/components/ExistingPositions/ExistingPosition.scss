@@ -1,0 +1,27 @@
+@import "css/vars";
+
+.existing-positions {
+  .panel-area {
+    &:not(:first-child) {
+      margin-top: 48px;
+    }
+  }
+
+  .position-row {
+
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+
+    .number {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .button {
+      margin: 0 !important;
+      width: 280px !important;
+    }
+  }
+}
